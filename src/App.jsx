@@ -1,20 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import './index.css';
+import App from './App.jsx';
 
-//pages
-import Home from "./Pages/Home/Index";
-import About from "./Pages/About"
-import Services from "./Pages/Services";
-import Contact from "./Pages/Contact";
-
-const App = () => {
-   return (
-      <Routes>
-         <Route path='/' element={<Home />} />
-         <Route path='/about' element={<About />} />
-         <Route path='/services' element={<Services />} />
-         <Route path='/contact' element={<Contact />} />
-      </Routes>
-   )
-}
-
-export default App
+createRoot(document.getElementById('root')).render(
+  <HashRouter>
+    <App />
+  </HashRouter>
+);
