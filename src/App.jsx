@@ -1,10 +1,14 @@
-import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
-import './index.css';
-import App from './App.jsx';
+import { Routes, Route } from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
-  <HashRouter>
-    <App />
-  </HashRouter>
-);
+// Pages
+import Home from "./Pages/Home";
+
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
+};
+
+export default App;
